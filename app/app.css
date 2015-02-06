@@ -28,3 +28,16 @@
   content: "";
   padding: 0;
 }
+
+.item-card {
+  /*border-radius: 5px;*/
+  padding: inherit;
+  /*padding-top: 1px;*/
+  /*margin-top: 30px;*/
+  background: #fff;
+  background: rgba(255,255,255,0.9);
+}
+
+.item-card h2, .item-card p {
+  padding-left: 3%;
+}

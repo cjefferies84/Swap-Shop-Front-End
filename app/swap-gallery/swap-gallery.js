@@ -14,9 +14,10 @@ angular.module('myApp.swapGallery', ['ngRoute'])
         $scope.swapGallery = data;
     });
 
-  $scope.deleteRecipe = function(recipeID) {
-    Restangular.one('swap-gallery', recipeID).customDELETE().then(function(){
-        $location.path('/swap-gallery');
+ // allows swap items to be deleted at items endpoint
+  $scope.deleteItem = function(itemID) {
+    Restangular.one('items', itemID).customDELETE().then(function(){
+        $location.path('/items');
     })
   }
 }]);
