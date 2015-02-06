@@ -41,3 +41,18 @@
 .item-card h2, .item-card p {
   padding-left: 3%;
 }
+
+.thumbnail {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
+
+body {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: url(img/brown-leather-texture.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
