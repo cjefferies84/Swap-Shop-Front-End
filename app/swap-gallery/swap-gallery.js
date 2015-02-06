@@ -10,8 +10,8 @@ angular.module('myApp.swapGallery', ['ngRoute'])
 }])
 
 .controller('SwapGalleryCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
-    Restangular.all('swaps').getList().then(function(data) {
-        $scope.items = data;
+    Restangular.all('swaps/').getList().then(function(data) {
+        $scope.swaps = data;
     });
 
  // allows swap items to be deleted at items endpoint
