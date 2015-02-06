@@ -9,7 +9,7 @@ angular.module('myApp', [
   'myApp.version',
   'restangular'
 ]).
-config(['$routeProvider', function($routeProvider) {
+config(['$routeProvider', "RestangularProvider", function($routeProvider, RestangularProvider ) {
   $routeProvider.otherwise({redirectTo: '/home'});
 
   RestangularProvider.setBaseUrl('http://localhost:8001');
