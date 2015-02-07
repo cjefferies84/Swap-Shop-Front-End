@@ -8,8 +8,7 @@ angular.module('myApp.mySwaps', ['ngRoute'])
     controller: 'MySwapsCtrl'
   });
 }])
-
-
+    
 .controller('MySwapsCtrl', ['$scope', 'Restangular', '$routeParams', '$location', function($scope, Restangular, $routeParams, $location) {
 
     $scope.swapId = $routeParams.swapId;

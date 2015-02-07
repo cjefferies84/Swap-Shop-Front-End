@@ -4,13 +4,13 @@ angular.module('myApp.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
-    templateUrl: 'home/my-swaps.html',
+    templateUrl: 'home/home.html',
     controller: 'HomeCtrl'
 
   });
 }])
 
-.controller('homeCtrl', [function() {
+.controller('HomeCtrl', [function() {
 
 }]);
 
