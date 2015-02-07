@@ -1,15 +1,17 @@
-<div class="recipe-card recipe-detail-card col-md-4">
+<div class="item-card item-detail-card col-md-4">
     <p>{{ item.name }}</p>
     <p>{{ item.description }}</p>
+    <p>{{ item.condition }}</p>
     <p>{{ item.status }}</p>
 
     <img class="img-responsive" src="{{ item.picture }}">
 
     <button class="btn btn-danger" ng-click="deleteItem()">Delete Item</button>
-    <br>
-    <textarea ng-model="newComment"></textarea>
+ <!--   <br> -->
+ <!--   <textarea ng-model="newComment"></textarea>
     <button ng-click="submitComment()">Submit Comment</button>
     <br>
     <div ng-repeat="comment in item.comments"
          <p>{{ comment.text }}</p>
+ -->
 </div>
