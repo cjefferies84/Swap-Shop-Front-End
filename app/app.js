@@ -11,15 +11,14 @@ angular.module('myApp', [
     'myApp.itemDetail',
     'myApp.version',
     'myApp.login'
-]).
-    config(['$routeProvider', "RestangularProvider", function ($routeProvider, RestangularProvider) {
+])
+    .config(['$routeProvider', "RestangularProvider", function ($routeProvider, RestangularProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
 
         RestangularProvider.setBaseUrl('http://localhost:8001');
-
     }])
 
-    .run(function ($cookieStore, $rootScope, $http, $location) {
+    .run(['$cookieStore', '$rootScope', '$http', '$location', function ($cookieStore, $rootScope, $http, $location) {
         if ($cookieStore.get('djangotoken')) {
             $http.defaults.headers.common['Authorization'] = 'Token ' + $cookieStore.get('djangotoken');
             //document.getElementById("main").style.display = "block";
@@ -27,4 +26,15 @@ angular.module('myApp', [
         } else {
             $location.path('/login')
         }
-    });
+
+        // Add auth token to every Restangular request
+        //RestangularProvider.setFullRequestInterceptor(function(element, operation, route, url, headers, params) {
+        //
+        //    var token = $cookieStore.get('djangotoken');
+        //    if (token) {
+        //        headers['Authorization'] = 'Token ' + token;
+        //    }
+        //
+        //    return { element: element, params: params, headers: headers }
+        //});
+    }]);

@@ -20,7 +20,7 @@ angular.module('myApp.login', ['ngRoute', 'ngCookies'])
                 $http.post("http://localhost:8001/api-token-auth/", user_data)
                     .success(function (response) {
                         $cookieStore.put('djangotoken', response.token);
-                        $http.defaults.headers.common['Authorization'] = 'Token ' + response.token;
+                        //$http.defaults.headers.common['Authorization'] = 'Token ' + response.token;
                         //authService.loginConfirmed();
                         $location.path('/home')
                     });
