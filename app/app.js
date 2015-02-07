@@ -18,7 +18,7 @@ angular.module('myApp', [
         RestangularProvider.setBaseUrl('http://localhost:8001');
     }])
 
-    .run(['$cookieStore', '$rootScope', '$http', '$location', 'Restangular', function ($cookieStore, $rootScope, $http, $location, RestangularProvider) {
+    .run(['$cookieStore', '$rootScope', '$http', '$location', 'Restangular', function ($cookieStore, $rootScope, $http, $location, Restangular) {
         if ($cookieStore.get('djangotoken')) {
             $http.defaults.headers.common['Authorization'] = 'Token ' + $cookieStore.get('djangotoken');
             //document.getElementById("main").style.display = "block";
@@ -28,7 +28,7 @@ angular.module('myApp', [
         }
 
         // Add auth token to every Restangular request
-        RestangularProvider.setFullRequestInterceptor(function(element, operation, route, url, headers, params) {
+        Restangular.setFullRequestInterceptor(function(element, operation, route, url, headers, params) {
 
             var token = $cookieStore.get('djangotoken');
             if (token) {
