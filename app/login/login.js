@@ -21,7 +21,7 @@ angular.module('myApp.login', ['ngRoute', 'ngCookies'])
                     .success(function (response) {
                         $cookieStore.put('djangotoken', response.token);
                         $http.defaults.headers.common['Authorization'] = 'Token ' + response.token;
-                        authService.loginConfirmed();
+                        //authService.loginConfirmed();
                         $location.path('/home')
                     });
             };
