@@ -9,7 +9,7 @@ angular.module('myApp.login', ['ngRoute', 'ngCookies'])
         });
     }])
 
-    .controller('LoginCtrl', function ($scope, Restangular, $cookieStore, $http) {
+    .controller('LoginCtrl', function ($scope, Restangular, $cookieStore, $http, $location) {
 
             $scope.performLogin = function () {
                 var user_data = {
@@ -22,7 +22,7 @@ angular.module('myApp.login', ['ngRoute', 'ngCookies'])
                         $cookieStore.put('djangotoken', response.token);
                         //$http.defaults.headers.common['Authorization'] = 'Token ' + response.token;
                         //authService.loginConfirmed();
-                        $location.path('/home')
+                        $location.path('/home');
                     });
             };
         });
