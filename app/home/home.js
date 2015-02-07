@@ -10,7 +10,7 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('homeCtrl', [function() {
+.controller('HomeCtrl', [function() {
 
 }]);
 
