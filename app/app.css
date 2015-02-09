@@ -38,6 +38,15 @@
   background: rgba(255,255,255,0.9);
 }
 
+.social-icon i {
+  color:#989797;
+  padding-right:20%
+}
+
+.social-icon i:hover {
+  color:#545353;
+}
+
 .item-card h2, .item-card p {
   padding-left: 3%;
 }
@@ -49,16 +58,16 @@
 }
 
 .item-detail-card {
-    padding: 50px;
+    padding: 20px;
 }
 
 body {
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   background: url(img/brown-leather-texture.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-top: 10%;
 
 }
 
@@ -67,7 +76,7 @@ body {
   table-layout: fixed;
   width: 90%;
   margin: 0 5%;
-  font-family: "OPEN SANS";
+  font-family: "Open Sans";
   font-size: 24px;
 
 
@@ -78,15 +87,28 @@ body {
   width: 100%;
   margin-top: 53px;
   background-color: #00142f;
-  padding-top: 3px;
-  padding-bottom: 5px;
-
-
+  padding-top: 20px;
+  padding-bottom: 20px;
 
 }
 
 .menu td{
    text-align: center;
+}
+
+.navbar-default {
+  background-color: #000;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:500px;
+  height:222px
+  position: absolute;
+  z-index: 1;
+};
 }
 
 
