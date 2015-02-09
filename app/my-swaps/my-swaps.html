@@ -1,3 +1,21 @@
-<p>This is the partial for view 1.</p>
+<div class="item-card item-detail-card col-md-4">
+    <p>{{ swap.name }}</p>
+    <p>{{ swap.description }}</p>
+    <p>Swap Initiator: {{ swap.initiator }}</p>
+    <p>Swap Initiator item(s): {{ swap.initiator_items }}</p>
+    <p>Swap partner: {{ swap.other_party }}</p>
+    <p>Swap partner item(s): {{ swap.other_party_items }}</p>
+
+    <img class="img-responsive" src="{{ item.picture }}">
+
+    <button class="btn btn-danger" ng-click="deleteItem()">Delete Swap</button>
+ <!--   <br> -->
+ <!--   <textarea ng-model="newComment"></textarea>
+    <button ng-click="submitComment()">Submit Comment</button>
+    <br>
+    <div ng-repeat="comment in swap.comments"
+         <p>{{ comment.text }}</p>
+ -->
+</div>
 
 
