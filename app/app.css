@@ -7,13 +7,13 @@
   padding: 0 0 0.5em;
 }
 
-.menu:before {
+/*.menu:before {
   content: "[";
 }
 
 .menu:after {
   content: "]";
-}
+}*/
 
 .menu > li {
   display: inline;
@@ -55,4 +55,34 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
+
+.menu {
+
+  table-layout: fixed;
+  width: 90%;
+  margin: 0 5%;
+  font-family: "OPEN SANS";
+  font-size: 24px;
+
+
+
+}
+
+.menu-container {
+  width: 100%;
+  margin-top: 53px;
+  background-color: #00142f;
+  padding-top: 3px;
+  padding-bottom: 5px;
+
+
+
+}
+
+.menu td{
+   text-align: center;
+}
+
+
