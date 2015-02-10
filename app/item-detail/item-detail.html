@@ -1,4 +1,4 @@
-<div class="item-card item-detail-card col-md-4">
+<div class="item-card item-detail-card col-md-5">
     <p>{{ item.name }}</p>
     <p>{{ item.description }}</p>
     <p>Condition: {{ item.condition }}</p>
@@ -20,10 +20,15 @@
 </div>
 
 
-<div ng-init="showItems=false" ng-show="showItems">
-    <ul>
-        <li ng-repeat="userItem in userItems">
-            {{ userItem.name }}
-        </li>
-    </ul>
+<div class="item-card item-detail-card col-md-1" ng-init="showItems=false" ng-show="showItems">
+    <div ng-repeat="userItem in userItems">
+        <div class="row">
+            <div class="thumbnail">
+                <div class="item-card">
+                    {{ userItem.name }}
+                    <img class="img-responsive" src="{{ userItem.picture }}">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
