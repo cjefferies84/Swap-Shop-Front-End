@@ -17,6 +17,7 @@ angular.module('myApp', [
         $routeProvider.otherwise({redirectTo: '/home'});
 
         RestangularProvider.setBaseUrl('http://localhost:8001');
+        //RestangularProvider.setDefaultHeaders({'Content-Type': undefined});
     }])
 
     .run(['$cookieStore', '$rootScope', '$http', '$location', 'Restangular', function ($cookieStore, $rootScope, $http, $location, Restangular) {
@@ -38,4 +39,5 @@ angular.module('myApp', [
 
             return { element: element, params: params, headers: headers }
         });
+
     }]);
