@@ -1,112 +1,117 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>My AngularJS App</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-        <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="app.css">
-        <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
 
-    <body>
+<body>
 
-<!--        <div class="menu-container">
-            <table class="menu">
-                <tr>
-                    <td><a href="#/home" style="color: #915937">Swap</a></td>
-                    <td><a href="#/swap-gallery" style="color: #a4bf6a">Swap Gallery</a></td>
-                    <td><a href="#/my-swaps" style="color: #f6f0c2">My Swaps</a></td>
-                    <td><a href="#/sign-in" style="color: #ba0007">Sign In</a></td>
-                </tr>
-            </table>
-        </div> -->
-        <div class="row">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
 
-            <nav class="navbar navbar-default navbar-fixed-top">
-              <div class="container">
-                <div class="col-md-3">
-                    <form class="navbar-form" role="search">
-                    <div class="input-group"><input type="text" class="form-control" ng-model="searchText" placeholder="Search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
+        <!--Brand Photo-->
+        <img class="logo" src="img/swap_shop2.png" alt="SwapShop">
+
+        <!--End Brand Photo-->
+
+
+        <!--Search Bar-->
+        <div class="col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text"
+                           class="form-control"
+                           ng-model="searchText"
+                           placeholder="Search">
+
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
+                        </button>
                     </div>
-                    </form>
                 </div>
-                  <div class="center">
-                  <img class="logo" src="img/swap_shop2.png" alt="SwapShop">
-                <div class="menu col-md-6
-                        <li><a href="#/home" style="color: #f16222">Swap</a></li>
-                        <li><a href="#/add-item" style="color: #0fa1b5">Add Item</a></li>
-                        <li><a href="#/swap-gallery" style="color: #f16222">Swap Gallery</a></li>
-                        <li><a href="#/my-swaps" style="color: #0fa1b5">My Swaps</a></li>
-                        <li><a href="#/sign-in" style="color: #f16222">Sign In</a></li>
-                    </ul>
-                </div>
-                  </div>
-              <div class="col-md-3">
-                <div class="social-icon">
-                    <i class="fa fa-twitter fa5"></i>
-                    <i class="fa fa-facebook fa5"></i>
-                    <i class="fa fa-instagram fa5"></i>
-                    <i class="fa fa-linkedin fa5"></i>
-                </div>
-              </div>
-              </div>
-            </nav>
+            </form>
         </div>
+        <!--End Search Bar-->
 
-          <!--[if lt IE 7]>
-              <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-          <![endif]-->
-        <div class="container">
-            <div ng-view></div>
-            <div ng-init="friends = [{name:'John', phone:'555-1276'},
+        <div class="menu col-md-6">
+            <ul>
+                <li><a href="#/home" style="color: #f16222">Swap</a></li>
+                <li><a href="#/add-item" style="color: #0fa1b5">Add Item</a></li>
+                <li><a href="#/swap-gallery" style="color: #f16222">Swap Gallery</a></li>
+                <li><a href="#/my-swaps" style="color: #0fa1b5">My Swaps</a></li>
+                <li><a href="#/sign-in" style="color: #f16222">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="social-icon">
+            <i class="fa fa-twitter fa5"></i>
+            <i class="fa fa-facebook fa5"></i>
+            <i class="fa fa-instagram fa5"></i>
+            <i class="fa fa-linkedin fa5"></i>
+        </div>
+    </div>
+</nav>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="container">
+    <div ng-view></div>
+    <div ng-init="friends = [{name:'John', phone:'555-1276'},
                                  {name:'Mary', phone:'800-BIG-MARY'},
                                  {name:'Mike', phone:'555-4321'},
                                  {name:'Adam', phone:'555-5678'},
                                  {name:'Julie', phone:'555-8765'},
                                  {name:'Juliette', phone:'555-5678'}]">
 
-            </div>
+    </div>
 
 
-            <table id="searchTextResults">
+    <table id="searchTextResults">
 
-                <tr ng-repeat="friend in friends | filter:searchText">
+        <tr ng-repeat="friend in friends | filter:searchText">
 
-                </tr>
-            </table>
+        </tr>
+    </table>
 
-        </div>
+</div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-  <script src="app.js"></script>
-  <script src="bower_components/lodash/dist/lodash.js"></script>
-  <script src="bower_components/restangular/dist/restangular.js"></script>
-  <script src="home/home.js"></script>
-  <script src="swap-gallery/swap-gallery.js"></script>
-  <script src="item-detail/item-detail.js"></script>
-  <script src="login/login.js"></script>
-  <script src="my-swaps/my-swaps.js"></script>
-  <script src="add-item/add-item.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="app.js"></script>
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<script src="bower_components/restangular/dist/restangular.js"></script>
+<script src="home/home.js"></script>
+<script src="swap-gallery/swap-gallery.js"></script>
+<script src="item-detail/item-detail.js"></script>
+<script src="login/login.js"></script>
+<script src="my-swaps/my-swaps.js"></script>
+<script src="add-item/add-item.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>

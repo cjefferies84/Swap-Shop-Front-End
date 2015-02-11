@@ -1,44 +1,52 @@
 /* app css stylesheet */
 
+body {
+    background: url(img/brown-leather-texture.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 70px;
+}
+
 .menu {
-  list-style: none;
-  margin-bottom: 2em;
-  padding: 15px .25 0.25em;
-  font-family: "Helvetica";
-  font-size: 14px;
+    list-style: none;
+    margin-bottom: 2em;
+    padding: 15px .25em 0.25em;
+    font-family: "Helvetica";
+    font-size: 14px;
 }
 
-.menu  ul > li {
-  display: inline;
-}
-.center   {
-  float-left;
-}
-.container   {
-  width: 100%;
+.menu ul > li {
+    display: inline;
 }
 
-
+/*.center   {*/
+/*float-left;*/
+/*}*/
+.container {
+    width: 100%;
+}
 
 .item-card {
-  width: 100%;
-  margin-top: 53px;
-  background-color: #00142f;
-  padding-top: 3px;
-  padding-bottom: 5px;
+    width: 100%;
+    margin-top: 53px;
+    background-color: #00142f;
+    padding-top: 3px;
+    padding-bottom: 5px;
 }
 
 .social-icon i {
-  color:#989797;
-  padding-right:20px
+    color: #989797;
+    padding-right: 20px
 }
 
 .social-icon i:hover {
-  color:#545353;
+    color: #545353;
 }
 
 .item-card h2, .item-card p {
-  padding-left: 3%;
+    padding-left: 3%;
 }
 
 .thumbnail {
@@ -47,31 +55,18 @@
     border: none;
 }
 
-
-
-body {
-  background: url(img/brown-leather-texture.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
-
-.navbar-default {
-  background-color: transparent;
-  border: 0;
-  padding-top: 30px;
-}
+/*.navbar-default {*/
+    /*background-color: transparent;*/
+    /*border: 0;*/
+    /*padding-top: 30px;*/
+/*}*/
 
 .logo {
-  display: block;
-  margin-left: 37%;
-  margin-right: auto;
-  width:325px;
-  height:auto;
-  z-index: 0;
-
+    /*display: block;*/
+    /*margin-left: 37%;*/
+    /*margin-right: auto;*/
+    width: 325px;
+    height: auto;
+    z-index: 0;
 
 }
