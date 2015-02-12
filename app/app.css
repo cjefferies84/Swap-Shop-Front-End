@@ -11,11 +11,28 @@ body {
     font-weight: 300;
 }
 
+.nav li:nth-child(even) a {
+    color: #f16222
+}
+
+.nav li:nth-child(odd) a {
+    color: #0fa1b5
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand > img {
+    max-height: 100%;
+}
+
+
 .menu {
     list-style: none;
     margin-bottom: 2em;
     padding: 15px .25em 0.25em;
-    font-family: "Helvetica";
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 14px;
 }
 
