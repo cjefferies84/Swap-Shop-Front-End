@@ -20,7 +20,7 @@
 11 error There is likely additional logging output above.
 12 error System Darwin 14.0.0
 13 error command "node" "/usr/local/bin/npm" "start"
-14 error cwd /Users/cjefferies/dev/swap_up/frontend
+14 error cwd /Users/thomasgcronin77/dev/swapup/frontend
 15 error node -v v0.10.35
 16 error npm -v 1.4.28
 17 error code ELIFECYCLE
