@@ -1,22 +1,43 @@
+<div class="row">
+    <button class="btn btn-success"
+            ng-click="filterValue='AVAILABLE'">Available
+    </button>
 
+    <button class="btn btn-warning"
+            ng-click="filterValue='PENDING'">Pending
+    </button>
 
+    <button class="btn btn-danger"
+            ng-click="filterValue='CLOSED'">Closed
+    </button>
+</div>
+<br>
 
-
-
-
-
-
-<div class="item-card item-detail-card col-md-4">
-    <p>{{ swap.name }}</p>
-    <p>{{ swap.description }}</p>
+<div ng-repeat="swap in swaps | filter: filterValue" class="item-card item-detail-card col-md-4">
+    <p>Swap name: {{ swap.name }}</p>
     <p>Swap Initiator: {{ swap.initiator }}</p>
-    <p>Swap Initiator item(s): {{ swap.initiator_items }}</p>
+    <p>Swap Status: {{ swap.status }}</p>
+
+
+    <div ng-repeat="item in swap.initiator_items">
+        <p>Item Name: {{ item.name }}</p>
+        <img src="{{ item.picture }}">
+        <p>Description: {{ item.description }}</p>
+        <p>Condition: {{ item.condition }}</p>
+    </div>
+
     <p>Swap partner: {{ swap.other_party }}</p>
-    <p>Swap partner item(s): {{ swap.other_party_items }}</p>
 
-    <img class="img-responsive" src="{{ item.picture }}">
+    <div ng-repeat="item in swap.other_party_items">
+        <p>Item Name: {{ item.name }}</p>
+        <img src="{{ item.picture }}">
+        <p>Description: {{ item.description }}</p>
+        <p>Condition: {{ item.condition }}</p>
+    </div>
 
-    <button class="btn btn-danger" ng-click="deleteItem()">Delete Swap</button>
+    <img class="img-responsive" src="{{ swap.picture }}">
+
+    <button class="btn btn-danger" ng-click="deleteSwap()">Delete Swap</button>
  <!--   <br> -->
  <!--   <textarea ng-model="newComment"></textarea>
     <button ng-click="submitComment()">Submit Comment</button>

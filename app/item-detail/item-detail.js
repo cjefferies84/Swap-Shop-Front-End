@@ -63,9 +63,15 @@ angular.module('myApp.itemDetail', ['ngRoute'])
                 other_party_items: [$scope.item.id]
             };
 
-            Restangular.one('swaps/').customPOST(swap).then(function() {
-                console.log(swap);
-            })
+            Restangular.one('swaps/').customPOST(swap)
+            .then(
+                function() {
+                    alert("Success! Your proposed swap has been sent to the other user!");
+                    $location.path('/my-swaps');
+                },
+                function() {
+                    alert("There was a problem proposing this swap");
+                })
         };
 
         $scope.selectItem = function(item) {
