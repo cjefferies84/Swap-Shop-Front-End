@@ -15,12 +15,24 @@ body {
     color: #f16222
 }
 
+.menu {
+    list-style: none;
+    margin-bottom: 2em;
+    padding: 15px .25em 0.25em;
+    font-family: "Helvetica";
+    font-size: 14px;
+}
+
 .nav li:nth-child(odd) a {
     color: #0fa1b5
 }
 
 .navbar-brand {
     padding: 0;
+}
+
+.menu ul > li {
+    display: inline;
 }
 
 .navbar-brand > img {
@@ -38,13 +50,6 @@ body {
 
 .menu ul > li {
     display: inline;
-}
-
-/*.center   {*/
-/*float-left;*/
-/*}*/
-.container {
-    width: 100%;
 }
 
 .item-card {
@@ -73,12 +78,6 @@ body {
     border-radius: 0;
     border: none;
 }
-
-/*.navbar-default {*/
-/*background-color: transparent;*/
-/*border: 0;*/
-/*padding-top: 30px;*/
-/*}*/
 
 .logo {
 
