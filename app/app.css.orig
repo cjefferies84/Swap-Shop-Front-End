@@ -15,6 +15,20 @@ body {
     color: #f16222
 }
 
+.menu {
+    list-style: none;
+<<<<<<< HEAD
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+=======
+    margin-bottom: 2em;
+    padding: 15px .25em 0.25em;
+    font-family: "Helvetica";
+    font-size: 14px;
+>>>>>>> feature/home-index
+}
+
 .nav li:nth-child(odd) a {
     color: #0fa1b5
 }
@@ -23,6 +37,28 @@ body {
     padding: 0;
 }
 
+<<<<<<< HEAD
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.item-card {
+    /*border-radius: 5px;*/
+    padding: inherit;
+    /*padding-top: 1px;*/
+    /*margin-top: 30px;*/
+    background: rgba(255, 255, 255, 0.9);
+=======
 .menu ul > li {
     display: inline;
 }
@@ -30,6 +66,7 @@ body {
 .navbar-brand > img {
     max-height: 120%;
 }
+
 
 .menu {
     list-style: none;
@@ -43,23 +80,22 @@ body {
     display: inline;
 }
 
-.menu-container {
+.item-card {
     width: 100%;
     margin-top: 53px;
     background-color: #00142f;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-}
-
-.item-card {
-    padding: inherit;
-    background: rgba(255, 255, 255, 0.9);
+    padding-top: 3px;
+    padding-bottom: 5px;
+>>>>>>> feature/home-index
 }
 
 .social-icon i {
     color: #989797;
+<<<<<<< HEAD
     padding-right: 20%
+=======
+    padding-right: 20px
+>>>>>>> feature/home-index
 }
 
 .social-icon i:hover {
@@ -77,8 +113,38 @@ body {
     background: none;
 }
 
+<<<<<<< HEAD
 .item-detail-card {
     padding: 20px;
+}
+
+body {
+    background: url(img/brown-leather-texture.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 10%;
+
+}
+
+.menu {
+
+    table-layout: fixed;
+    width: 90%;
+    margin: 0 5%;
+    font-family: "Open Sans";
+    font-size: 24px;
+
+}
+
+.menu-container {
+    width: 100%;
+    margin-top: 53px;
+    background-color: #00142f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 .menu td {
@@ -99,6 +165,11 @@ body {
     z-index: 1;
 }
 
+.empty-swap-space {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 700px;
+}
+
 .my-items {
     width: 100%;
     padding-top: 20px;
@@ -110,7 +181,7 @@ body {
 
 .my-items-background:hover {
     /*opacity: 0;*/
-    background: #0fa1b5;
+    background: rgba(24,188,156,.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -124,11 +195,15 @@ body {
     margin-top: 0
 }
 
-.empty-swap-space {
-    background-color: rgba(255, 255, 255, 0.9);
-    height: 700px;
-}
-
 .selected {
-    background-color: #f16222;
+    background-color: red;
 }
+=======
+.logo {
+
+    width: 325px;
+    height: auto;
+    z-index: 0;
+
+}
+>>>>>>> feature/home-index

@@ -17,23 +17,21 @@
 
 <div class="col-md-4 col-md-offset-2 empty-swap-space">
     <div ng-init="showItems=false" ng-show="showItems">
-        <div ng-repeat="userItem in userItems" ng-click="selectItem(userItem)" ng-class="{selected: userItem.selected}">
-            <!--<div class="row">-->
-                <div class="my-items">
-                    <div class="my-items-background">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="img-responsive" src="{{ userItem.picture }}">
-                            </div>
-                            <div class="col-md-9">
-                                <h2>{{ userItem.name }}</h2>
-                                <p>{{ userItem.description }}</p>
-                            </div>
-
+        <div ng-repeat="userItem in userItems" ng-click="selectItem(userItem)">
+            <div class="my-items">
+                <div ng-class="{'selected': userItem.selected, 'my-items-background': !userItem.selected }">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="img-responsive" src="{{ userItem.picture }}">
                         </div>
+                        <div class="col-md-9">
+                            <h2>{{ userItem.name }}</h2>
+                            <p>{{ userItem.description }}</p>
+                        </div>
+
                     </div>
                 </div>
-            <!--</div>-->
+            </div>
         </div>
         <button ng-click="createSwap()">Propose swap</button>
     </div>
