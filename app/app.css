@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-    background: url(img/316963.jpg) no-repeat center center fixed;
+    background: url(img/swop_shop_bckgd4.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -36,7 +36,7 @@ body {
 }
 
 .navbar-brand > img {
-    max-height: 100%;
+    max-height: 120%;
 }
 
 
