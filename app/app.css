@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-    background: url(img/brown-leather-texture.jpg) no-repeat center center fixed;
+    background: url(img/316963.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -62,9 +62,8 @@ body {
 /*}*/
 
 .logo {
-    /*display: block;*/
-    /*margin-left: 37%;*/
-    /*margin-right: auto;*/
+
+
     width: 325px;
     height: auto;
     z-index: 0;
