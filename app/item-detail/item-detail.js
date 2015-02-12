@@ -37,10 +37,10 @@ angular.module('myApp.itemDetail', ['ngRoute'])
         $scope.swap = function() {
             if ($scope.showItems == true) {
                 $scope.showItems = false;
-                $scope.swapButtonText = "Swap";
+                $scope.swapButtonText = "Show My Items";
             } else {
                 $scope.showItems = true;
-                $scope.swapButtonText = "Undo Swap";
+                $scope.swapButtonText = "Hide My Items";
             }
 
         }

@@ -1,34 +1,38 @@
-<div class="item-card item-detail-card col-md-5">
-    <p>{{ item.name }}</p>
-    <p>{{ item.description }}</p>
-    <p>Condition: {{ item.condition }}</p>
-    <p>Status: {{ item.status }}</p>
+<div class="item-card item-detail-card col-md-3 col-md-offset-1">
+    <h2 class="text-center">{{ item.name }}</h2>
 
     <img class="img-responsive" src="{{ item.picture }}">
+    <br>
+    <p>Condition: {{ item.condition }} Status: {{ item.status }}</p>
+    <p>{{ item.description }}</p>
+
 
     <button class="btn btn-danger" ng-click="deleteItem()">Delete Item</button>
 
-    <button class="btn btn-primary" ng-init="swapButtonText='Swap'" ng-click="swap()">{{ swapButtonText }}</button>
+    <button class="btn btn-primary" ng-init="swapButtonText='Show My Items'" ng-click="swap()">{{ swapButtonText }}</button>
 
- <!--   <br> -->
- <!--   <textarea ng-model="newComment"></textarea>
-    <button ng-click="submitComment()">Submit Comment</button>
-    <br>
-    <div ng-repeat="comment in item.comments"
-         <p>{{ comment.text }}</p>
- -->
 </div>
 
 
-<div class="item-card item-detail-card col-md-1" ng-init="showItems=false" ng-show="showItems">
-    <div ng-repeat="userItem in userItems">
-        <div class="row">
-            <div class="thumbnail">
-                <div class="item-card">
-                    {{ userItem.name }}
-                    <img class="img-responsive" src="{{ userItem.picture }}">
+
+<div class="col-md-4 col-md-offset-2 empty-swap-space">
+    <div ng-init="showItems=false" ng-show="showItems">
+        <div ng-repeat="userItem in userItems">
+            <!--<div class="row">-->
+                <div class="my-items">
+                    <div class="my-items-background">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="img-responsive" src="{{ userItem.picture }}">
+                            </div>
+                            <div class="col-md-9">
+                                <h2>{{ userItem.name }}</h2>
+                                <p>{{ userItem.description }}</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
+            <!--</div>-->
         </div>
     </div>
-</div>

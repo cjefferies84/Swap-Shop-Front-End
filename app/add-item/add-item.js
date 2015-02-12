@@ -37,4 +37,6 @@ angular.module('myApp.addItem', ['ngRoute'])
             $scope.item.picture = files[0];
         };
 
+       $scope.conditions = ['Poor', 'Fair', 'Good', 'Excellent', 'Like New', 'New']
+
     }]);

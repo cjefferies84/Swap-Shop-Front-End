@@ -26,7 +26,8 @@
 
 <label>Item Condition
     <br>
-    <textarea ng-model="item.condition"></textarea>
+    <!-- <textarea ng-model="item.condition"></textarea> -->
+    <select ng-model="item.condition" ng-options="condition for condition in conditions"></select>
 </label>
 <br>
 <br>
