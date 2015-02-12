@@ -43,5 +43,32 @@ angular.module('myApp.itemDetail', ['ngRoute'])
                 $scope.swapButtonText = "Hide My Items";
             }
 
+        };
+
+        $scope.createSwap = function() {
+            var selectedItems = [];
+
+            for (var itemIndex = 0; itemIndex < $scope.userItems.length; itemIndex++) {
+                var item = $scope.userItems[itemIndex];
+                if (item.selected) {
+                    selectedItems.push(item.id);
+                }
+            }
+
+            var swap = {
+                name: "Generic swap name",
+                initiator: 1,
+                initiator_items: selectedItems,
+                other_party: 1,
+                other_party_items: [$scope.item.id]
+            };
+
+            Restangular.one('swaps/').customPOST(swap).then(function() {
+                console.log(swap);
+            })
+        };
+
+        $scope.selectItem = function(item) {
+            item.selected = item.hasOwnProperty('selected') ? !item.selected : true;
         }
     }]);

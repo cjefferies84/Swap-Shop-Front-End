@@ -137,3 +137,7 @@ body {
 .my-items h2 {
     margin-top: 0
 }
+
+.selected {
+    background-color: red;
+}
