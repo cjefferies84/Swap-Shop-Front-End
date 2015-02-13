@@ -10,10 +10,19 @@
     <button class="btn btn-danger"
             ng-click="filterValue='CLOSED'">Closed
     </button>
+
+    <div class="col-md-2 pull-right">
+
+        <input type="text" class="form-control" placeholder="Search" ng-model="searchTerm">
+
+    </div>
 </div>
+
 <br>
 
-<div ng-repeat="swap in swaps | filter: filterValue" class="item-card item-detail-card col-md-4">
+
+
+<div ng-repeat="swap in swaps | filter: searchTerm | filter: filterValue" class="item-card item-detail-card col-md-4">
     <p>Swap name: {{ swap.name }}</p>
     <p>Swap Initiator: {{ swap.initiator }}</p>
     <p>Swap Status: {{ swap.status }}</p>
