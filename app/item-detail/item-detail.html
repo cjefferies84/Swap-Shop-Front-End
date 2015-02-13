@@ -3,31 +3,37 @@
 
     <img class="img-responsive" src="{{ item.picture }}">
     <br>
+
     <p>Condition: {{ item.condition }} Status: {{ item.status }}</p>
+
     <p>{{ item.description }}</p>
 
 
     <button class="btn btn-danger" ng-click="deleteItem()">Delete Item</button>
 
-    <button class="btn btn-primary" ng-init="swapButtonText='Show My Items'" ng-click="swap()">{{ swapButtonText }}</button>
+    <button class="btn btn-primary" ng-init="swapButtonText='Show My Items'" ng-click="swap()">{{ swapButtonText }}
+    </button>
 
 </div>
-
-
 
 <div class="col-md-4 col-md-offset-2 empty-swap-space">
     <div ng-init="showItems=false" ng-show="showItems">
         <div ng-repeat="userItem in userItems" ng-click="selectItem(userItem)">
             <div class="my-items">
-                <div ng-class="{'selected': userItem.selected, 'my-items-background': !userItem.selected }">
+                <div class="checkmark"
+                     ng-class="{'selected': userItem.selected, 'not-selected': !userItem.selected }">
                     <div class="row">
                         <div class="col-md-3">
-                            <img class="img-responsive" src="{{ userItem.picture }}">
+                            <img class="img-responsive" ng-src="{{ userItem.picture }}">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8">
                             <h2>{{ userItem.name }}</h2>
+
                             <p>{{ userItem.description }}</p>
                         </div>
+
+                        <i class="fa fa-square-o icon"></i>
+                        <i class="fa fa-check-square-o icon"></i>
 
                     </div>
                 </div>
@@ -35,3 +41,4 @@
         </div>
         <button ng-click="createSwap()">Propose swap</button>
     </div>
+</div>
