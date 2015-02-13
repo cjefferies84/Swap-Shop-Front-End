@@ -27,7 +27,7 @@ angular.module('myApp.addItem', ['ngRoute'])
             $http.post('http://localhost:8001/items/', fd, {
                 headers: {'Content-Type': undefined}
             }).success(function (response) {
-                $location.path('/swap-gallery');
+                $location.path('/my-items');
             }).error(function (response) {
                 console.log('Error response: ' + response);
             });
