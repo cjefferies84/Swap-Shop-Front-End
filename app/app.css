@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-    background: url(img/swop_shop_bckgd4.png) no-repeat center center fixed;
+    background: url(img/swap_shop5.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,6 +21,7 @@ body {
 
 .navbar-brand {
     padding: 0;
+    max-height: 160%
 }
 
 .menu ul > li {
@@ -31,6 +32,33 @@ body {
     max-height: 120%;
 }
 
+/*Buttons*/
+
+.btn-danger {
+    background-color: #f16222;
+}
+
+.btn-danger-border {
+    color: #000;
+}
+
+.btn-danger:hover {
+    background-color: #e37718;
+}
+
+.btn-primary {
+    background-color: #0fa1b5;
+}
+
+.btn-primary:hover {
+    background-color: #208d9c;
+}
+
+.text-center {
+    color: #208d9c;
+}
+
+/*End Buttons*/
 .menu {
     list-style: none;
     margin-bottom: 2em;
@@ -108,7 +136,7 @@ body {
     opacity: .6;
 }
 
-.my-items-background:hover {
+.not-selected:hover {
     /*opacity: 0;*/
     background: #0fa1b5;
     -webkit-transition: all ease .5s;
@@ -129,6 +157,40 @@ body {
     height: 700px;
 }
 
+
+/*Selecting items in the item details page*/
+
 .selected {
-    background-color: #f16222;
+    background-color: #0fa1b5;
 }
+
+.fa-square-o, .fa-check-square-o {
+    font-size: 2em;
+    margin-left: -4%;
+    margin-top: 5px;
+}
+
+.checkmark .fa-check-square-o,
+.checkmark:hover .fa-square-o {
+    display: none;
+}
+
+.checkmark:hover .fa-check-square-o {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: -4%;
+    margin-top: 5px;
+}
+
+.selected .fa-square-o {
+    display: none;
+}
+
+.selected .fa-check-square-o {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: -4%;
+    margin-top: 5px;
+}
+
+/*End selecting items in the item details page*/
