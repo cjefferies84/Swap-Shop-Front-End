@@ -8,6 +8,7 @@ angular.module('myApp', [
     'myApp.home',
     'myApp.mySwaps',
     'myApp.swapGallery',
+    'myApp.myItems',
     'myApp.itemDetail',
     'myApp.addItem',
     'myApp.version',
