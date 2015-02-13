@@ -20,4 +20,6 @@ angular.module('myApp.swapGallery', ['ngRoute'])
         $location.path('/items');
     })
   }
+
+
 }]);
