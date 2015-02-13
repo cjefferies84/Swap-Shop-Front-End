@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-    background: url(img/swop_shop_bckgd4.png) no-repeat center center fixed;
+    background: url(img/swap_shop5.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,6 +21,7 @@ body {
 
 .navbar-brand {
     padding: 0;
+    max-height: 160%
 }
 
 .menu ul > li {
