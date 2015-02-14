@@ -129,11 +129,7 @@ body {
 
 .my-items {
     width: 100%;
-    padding-top: 20px;
-}
-
-.my-items:hover {
-    opacity: .6;
+    /*padding-top: 20px;*/
 }
 
 .not-selected:hover {
@@ -154,14 +150,7 @@ body {
 
 .empty-swap-space {
     background-color: rgba(255, 255, 255, 0.9);
-    height: 700px;
-}
-
-
-/*Selecting items in the item details page*/
-
-.selected {
-    background-color: #0fa1b5;
+    max-height: 100%;
 }
 
 .fa-square-o, .fa-check-square-o {
@@ -170,27 +159,17 @@ body {
     margin-top: 5px;
 }
 
-.checkmark .fa-check-square-o,
-.checkmark:hover .fa-square-o {
-    display: none;
+.listItems {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-.checkmark:hover .fa-check-square-o {
-    display: inline-block;
-    font-size: 2em;
-    margin-left: -4%;
-    margin-top: 5px;
+.hover-hand {
+    cursor: pointer;
 }
 
-.selected .fa-square-o {
-    display: none;
-}
 
-.selected .fa-check-square-o {
-    display: inline-block;
-    font-size: 2em;
-    margin-left: -4%;
-    margin-top: 5px;
-}
+
 
 /*End selecting items in the item details page*/
