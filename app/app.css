@@ -80,10 +80,6 @@ body {
 
 }
 
-.item-card {
-    padding: inherit;
-    background: rgba(255, 255, 255, 0.9);
-}
 
 .social-icon i {
     color: #989797;
@@ -92,6 +88,11 @@ body {
 
 .social-icon i:hover {
     color: #545353;
+}
+
+.item-card {
+    padding: inherit;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .item-card h2, .item-card p {
@@ -127,6 +128,10 @@ body {
     z-index: 1;
 }
 
+.row {
+    line-height:1px;
+}
+
 .my-items {
     width: 100%;
     /*padding-top: 20px;*/
@@ -148,6 +153,12 @@ body {
     margin-top: 0
 }
 
+.listItems {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 .empty-swap-space {
     background-color: rgba(255, 255, 255, 0.9);
     max-height: 100%;
@@ -159,11 +170,6 @@ body {
     margin-top: 5px;
 }
 
-.listItems {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    margin-bottom: 10px;
-}
 
 .hover-hand {
     cursor: pointer;
