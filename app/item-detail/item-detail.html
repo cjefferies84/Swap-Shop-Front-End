@@ -1,7 +1,7 @@
-<div class="item-card item-detail-card" ng-class="{'col-md-3 col-md-offset-1': showItems, 'col-md-8 col-md-offset-1': !showItems }" ng-init="showItems=false">
+<div class="item-detail-card" ng-class="{'col-md-3 col-md-offset-1': showItems, 'col-md-8 col-md-offset-1': !showItems }" ng-init="showItems=false">
     <h2 class="text-center">{{ item.name }}</h2>
 
-    <img class="img-responsive" src="{{ item.picture }}">
+    <img class="img-responsive img-centered" src="{{ item.picture }}">
     <br>
 
     <p>Condition: {{ item.condition }} Status: {{ item.status }}</p>
@@ -24,7 +24,7 @@
 
                     <div class="row">
                         <div class="col-md-3">
-                            <img class="img-responsive" ng-src="{{ userItem.picture }}">
+                            <img class="img-responsive img-centered" ng-src="{{ userItem.picture }}">
                         </div>
                         <div class="col-md-8">
                             <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}">
