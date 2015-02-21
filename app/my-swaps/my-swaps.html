@@ -21,31 +21,52 @@
 <br>
 
 <div ng-repeat="swap in swaps | filter: searchTerm | filter: filterValue" class="item-card item-detail-card col-md-4">
-    <p>Swap name: {{ swap.name }}</p>
+
     <p>Swap Initiator: {{ swap.initiator }}</p>
+
     <p>Swap Status: {{ swap.status }}</p>
 
 
     <div ng-repeat="item in swap.initiator_items">
+        console.log(item);
+        <p>Initiator's Item</p>
         <p>Item Name: {{ item.name }}</p>
-        <img src="{{ item.picture }}">
+        <img src="http://localhost:8001{{ item.picture }}">
+
         <p>Description: {{ item.description }}</p>
+
         <p>Condition: {{ item.condition }}</p>
     </div>
-
-    <p>Swap partner: {{ swap.other_party }}</p>
 
     <div ng-repeat="item in swap.other_party_items">
+        <p>Swap partner: {{ swap.other_party }}</p>
+
         <p>Item Name: {{ item.name }}</p>
-        <img src="{{ item.picture }}">
+        <img src="http://localhost:8001{{ item.picture }}">
+
         <p>Description: {{ item.description }}</p>
+
         <p>Condition: {{ item.condition }}</p>
     </div>
 
-    <img class="img-responsive" src="{{ swap.picture }}">
+    <img class="img-responsive" src="http://localhost:8001{{ swap.picture }}">
 
-    <button class="btn btn-danger" ng-click="deleteSwap()">Delete Swap</button>
- <!--   <br> -->
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" ng-click="initiateSwap(swap.id)">Initiate Swap</button>
+        <button type="button" class="btn btn-default" ng-click="declineSwap()">Decline Swap</button>
+        <button type="button" class="btn btn-danger" ng-click="deleteSwap()">Delete Swap</button>
+    </div>
+                        
+</div>
+                
+         
+    
+
+
+
+
+
+    <!--   <br> -->
  <!--   <textarea ng-model="newComment"></textarea>
     <button ng-click="submitComment()">Submit Comment</button>
     <br>
