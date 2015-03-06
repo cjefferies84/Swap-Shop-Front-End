@@ -16,8 +16,17 @@
 
 </div>
 
+<div class="col-md-1" ng-show="showItems">
+    <button class="btn btn-lg btn-swap" ng-click="createSwap()">
+        <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Propose Swap
+        <!--<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>-->
+    </button>
+</div>
+
 <div class="col-md-4 col-md-offset-2"  id="accordion" role="tablist" aria-multiselectable="true" ng-show="showItems">
+
     <div >
+
         <div ng-repeat="userItem in userItems" class="listItems">
             <div class="my-items" id="heading{{ $index }}">
 
@@ -40,6 +49,6 @@
                 <p>{{ userItem.description }}</p>
             </div>
         </div>
-        <button class="btn btn-primary" ng-click="createSwap()">Propose swap</button>
+
     </div>
 </div>

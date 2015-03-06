@@ -20,44 +20,44 @@
 
 <br>
 
-<div ng-repeat="swap in swaps | filter: searchTerm | filter: filterValue" class="item-card item-detail-card col-md-4">
+<div ng-repeat="swap in swaps | filter: searchTerm | filter: filterValue" class="item-card item-detail-card col-md-6">
 
-    <p>Swap Initiator: {{ swap.initiator }}</p>
+        <!--<p>Swap Initiator: {{ swap.initiator }}</p>-->
 
-    <p>Swap Status: {{ swap.status }}</p>
+        <!--<p>Swap Status: {{ swap.status }}</p>-->
 
 
-    <div ng-repeat="item in swap.initiator_items">
+        <div ng-repeat="item in swap.initiator_items" class="col-md-6">
 
-        <p>Initiator's Item</p>
-        <p>Item Name: {{ item.name }}</p>
-        <div class="swap-pic-container">
-            <img src="http://localhost:8001{{ item.picture }}">
+            <p>Initiator's Item</p>
+            <p>Item: {{ item.name }}</p>
+            <div class="swap-pic-container">
+                <img src="http://localhost:8001{{ item.picture }}">
+            </div>
+            <p>Description: {{ item.description }}</p>
+
+            <p>Condition: {{ item.condition }}</p>
         </div>
-        <p>Description: {{ item.description }}</p>
 
-        <p>Condition: {{ item.condition }}</p>
-    </div>
+        <div ng-repeat="item in swap.other_party_items" class="col-md-6">
+            <p>Swap partner: {{ swap.other_party }}</p>
 
-    <div ng-repeat="item in swap.other_party_items">
-        <p>Swap partner: {{ swap.other_party }}</p>
+            <p>Item Name: {{ item.name }}</p>
+            <div class="swap-pic-container">
+                <img src="http://localhost:8001{{ item.picture }}">
+            </div>
+            <p>Description: {{ item.description }}</p>
 
-        <p>Item Name: {{ item.name }}</p>
-        <div class="swap-pic-container">
-            <img src="http://localhost:8001{{ item.picture }}">
+            <p>Condition: {{ item.condition }}</p>
         </div>
-        <p>Description: {{ item.description }}</p>
 
-        <p>Condition: {{ item.condition }}</p>
-    </div>
+        <img class="img-responsive" src="http://localhost:8001{{ swap.picture }}">
 
-    <img class="img-responsive" src="http://localhost:8001{{ swap.picture }}">
-
-    <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default" ng-click="initiateSwap(swap.id)">Initiate Swap</button>
-        <button type="button" class="btn btn-default" ng-click="declineSwap()">Decline Swap</button>
-        <button type="button" class="btn btn-danger" ng-click="deleteSwap()">Delete Swap</button>
-    </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default" ng-click="initiateSwap(swap.id)">Initiate Swap</button>
+            <button type="button" class="btn btn-default" ng-click="declineSwap()">Decline Swap</button>
+            <button type="button" class="btn btn-danger" ng-click="deleteSwap()">Delete Swap</button>
+        </div>
                         
 </div>
                 
