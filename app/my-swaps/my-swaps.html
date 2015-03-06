@@ -28,11 +28,12 @@
 
 
     <div ng-repeat="item in swap.initiator_items">
-        console.log(item);
+
         <p>Initiator's Item</p>
         <p>Item Name: {{ item.name }}</p>
-        <img src="http://localhost:8001{{ item.picture }}">
-
+        <div class="swap-pic-container">
+            <img src="http://localhost:8001{{ item.picture }}">
+        </div>
         <p>Description: {{ item.description }}</p>
 
         <p>Condition: {{ item.condition }}</p>
@@ -42,8 +43,9 @@
         <p>Swap partner: {{ swap.other_party }}</p>
 
         <p>Item Name: {{ item.name }}</p>
-        <img src="http://localhost:8001{{ item.picture }}">
-
+        <div class="swap-pic-container">
+            <img src="http://localhost:8001{{ item.picture }}">
+        </div>
         <p>Description: {{ item.description }}</p>
 
         <p>Condition: {{ item.condition }}</p>

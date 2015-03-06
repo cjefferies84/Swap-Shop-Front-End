@@ -1,14 +1,9 @@
-<div>
-    Log in
+<div class="container">
+   <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="form-control" placeholder="Username" required autofocus ng-model="username">
+        <input type="password" class="form-control" placeholder="Password" required ng-model="password">
+        <button class="btn btn-lg btn-primary btn-block" ng-click="performLogin()">Sign in</button>
+   </form>
+    <a href="#/register"><button class="btn-link center">Create Account</button></a>
 </div>
-
-<div>
-    <div>
-        Username: <input ng-model="username"/>
-    </div>
-    <div style="margin-top: 20px;">
-        Password: <input ng-model="password"/>
-    </div>
-</div>
-
-<button ng-click="performLogin()">Login</button>

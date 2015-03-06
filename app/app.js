@@ -5,17 +5,17 @@ angular.module('myApp', [
     'ngRoute',
     'ngCookies',
     'restangular',
-    'myApp.home',
     'myApp.mySwaps',
     'myApp.swapGallery',
     'myApp.myItems',
     'myApp.itemDetail',
     'myApp.addItem',
     'myApp.version',
-    'myApp.login'
+    'myApp.login',
+    'myApp.register'
 ])
     .config(['$routeProvider', "RestangularProvider", function ($routeProvider, RestangularProvider) {
-        $routeProvider.otherwise({redirectTo: '/home'});
+        $routeProvider.otherwise({redirectTo: '/swap-gallery'});
 
         RestangularProvider.setBaseUrl('http://localhost:8001');
         //RestangularProvider.setDefaultHeaders({'Content-Type': undefined});
