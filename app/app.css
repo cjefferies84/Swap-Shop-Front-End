@@ -122,9 +122,10 @@ a {
 }
 
 .item-detail-card {
-    padding: 20px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.7);
     height: inherit;
+    margin-bottom: 20px;
 }
 
 .menu td {
