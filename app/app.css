@@ -12,11 +12,13 @@ body {
 }
 
 .nav li:nth-child(even) a {
-    color: #f16222
+    color: #f16222;
+    font-size: 20px;
 }
 
 .nav li:nth-child(odd) a {
-    color: #0fa1b5
+    color: #0fa1b5;
+    font-size: 20px;
 }
 
 a {
@@ -221,6 +223,31 @@ a {
     max-width: 100%;
 }
 
+@media (min-width: 768px) {
+    .navbar-nav {
+        float:none; !important
+    }
+}
+
+.navbar-inverse {
+    opacity: 0.9;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.form-signin-heading {
+    text-shadow: 1px 1px 14px #fff;
+    color: black;
+}
+
+.btn-link {
+    text-shadow: 1px 1px 14px #fff;
+    font-size: large;
+    color: black;
+}
 
 
 /*End selecting items in the item details page*/

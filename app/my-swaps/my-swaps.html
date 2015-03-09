@@ -32,7 +32,7 @@
 <div class="col-md-6">
     <div class="row">
         <div class="swaps-col-heading">
-            <h2 class="text-center">Test2</h2>
+            <h2 class="text-center">My Items</h2>
         </div>
     </div>
 
@@ -59,7 +59,7 @@
 
     <div class="row">
         <div class="swaps-col-heading">
-            <h2 class="text-center">Test2</h2>
+            <h2 class="text-center">Partner's Items</h2>
         </div>
     </div>
 
@@ -67,15 +67,14 @@
         <div class="col-md-6"
              ng-repeat="item in swap.other_party_items">
 
-            <p>Swap partner: {{ swap.other_party }}</p>
+            <div class="thumbnail project_item">
 
-            <p>Item Name: {{ item.name }}</p>
-            <div class="swap-pic-container">
-                <img src="http://localhost:8001{{ item.picture }}">
+                 <h4 class="text-center">{{ item.name }}</h4>
+                <div class="swap-pic-container center-block">
+                    <img class="center-block" src="http://localhost:8001{{ item.picture }}">
+                </div>
             </div>
-            <!--<p>Description: {{ item.description }}</p>-->
 
-            <!--<p>Condition: {{ item.condition }}</p>-->
         </div>
     </div>
 </div>
