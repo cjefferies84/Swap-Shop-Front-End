@@ -28,23 +28,45 @@
         <!--<p>Swap Status: {{ swap.status }}</p>-->
 
 
-    <br>
-    <div class="row thumbnail col-md-6">
-        <div ng-repeat="item in swap.initiator_items" class="col-md-6">
-
-            <!--<p>Initiator's Item</p>-->
-            <p>{{ item.name }}</p>
-            <div class="swap-pic-container">
-                <img src="http://localhost:8001{{ item.picture }}">
-            </div>
-            <!--<p>Description: {{ item.description }}</p>-->
-
-            <!--<p>Condition: {{ item.condition }}</p>-->
+<br>
+<div class="col-md-6">
+    <div class="row">
+        <div class="swaps-col-heading">
+            <h2 class="text-center">Test2</h2>
         </div>
     </div>
 
-    <div class="col-md-6">
-        <div ng-repeat="item in swap.other_party_items" class="col-md-6">
+    <div class="row">
+        <div class="col-md-6"
+             ng-repeat="item in swap.initiator_items">
+
+            <div class="thumbnail project_item">
+
+                <!--<p>Initiator's Item</p>-->
+                <h4 class="text-center">{{ item.name }}</h4>
+                <div class="swap-pic-container center-block">
+                    <img class="center-block" src="http://localhost:8001{{ item.picture }}">
+                </div>
+                <!--<p>Description: {{ item.description }}</p>-->
+
+                <!--<p>Condition: {{ item.condition }}</p>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+
+    <div class="row">
+        <div class="swaps-col-heading">
+            <h2 class="text-center">Test2</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6"
+             ng-repeat="item in swap.other_party_items">
+
             <p>Swap partner: {{ swap.other_party }}</p>
 
             <p>Item Name: {{ item.name }}</p>
@@ -56,42 +78,15 @@
             <!--<p>Condition: {{ item.condition }}</p>-->
         </div>
     </div>
+</div>
+
 <div class="col-md-12 text-center" class="btn-group" role="group" aria-label="...">
     <button type="button" class="btn btn-default" ng-click="initiateSwap(swap.id)">Initiate Swap</button>
     <button type="button" class="btn btn-default" ng-click="declineSwap()">Decline Swap</button>
     <button type="button" class="btn btn-danger" ng-click="deleteSwap()">Delete Swap</button>
 </div>                   
 </div>
-</div>
-               
-
-         
-    
 
 
-
-
-
-    <!--   <br> -->
- <!--   <textarea ng-model="newComment"></textarea>
-    <button ng-click="submitComment()">Submit Comment</button>
-    <br>
-    <div ng-repeat="comment in swap.comments"
-         <p>{{ comment.text }}</p>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
 
 

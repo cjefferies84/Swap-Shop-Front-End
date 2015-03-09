@@ -35,7 +35,7 @@ angular.module('myApp.mySwaps', ['ngRoute'])
                     function () {
                         alert('There was a problem initiating your item')
                     })
-            }liz
+            }
         };
 
         $scope.declineSwap = function () {
