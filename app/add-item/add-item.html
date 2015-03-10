@@ -3,34 +3,47 @@
     <input ng-model="item.picture">
 </label>
 -->
-<div>
-    <br/>
-    <input type="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+
+
+
+<div class="add-item-detail-card item-detail-card">
+
+    <div id="select-image">
+        <label>Select Image
+            <div>
+                <input type="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+            </div>
+        </label>
+    <br>
+    <br>
+    <div id="item-name">
+        <label>Item Name
+            <br>
+            <input ng-model="item.name">
+        </label>
+    </div>
+    <br>
+    <div id="item-description">
+        <label>Item Description
+            <br>
+            <textarea rows="7" cols="50" ng-model="item.description"></textarea>
+        </label>
+    <br>
+
+    </div>
+    <br>
+    <div id="item-condition">
+        <label>Item Condition
+            <br>
+            <!-- <textarea ng-model="item.condition"></textarea> -->
+            <select ng-model="item.condition" ng-options="condition for condition in conditions"></select>
+        </label>
+        <br>
+        <br>
+        <div><button type="button" class="btn btn-primary" ng-click="addItem()">Save New Item</button></div>
+    </div>
+
 </div>
-<br>
-<br>
-
-<label>Item Name
-    <br>
-    <input ng-model="item.name">
-</label>
-<br>
-<br>
-
-<label>Item Description
-    <br>
-    <textarea ng-model="item.description"></textarea>
-</label>
-<br>
-<br>
-
-<label>Item Condition
-    <br>
-    <!-- <textarea ng-model="item.condition"></textarea> -->
-    <select ng-model="item.condition" ng-options="condition for condition in conditions"></select>
-</label>
-<br>
-<br>
 
 
-<button ng-click="addItem()">Save New Item</button>
+

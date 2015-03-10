@@ -40,3 +40,24 @@ angular.module('myApp.addItem', ['ngRoute'])
       $scope.conditions = ['Poor', 'Fair', 'Good', 'Excellent', 'Like New', 'New']
 
     }]);
+
+'use strict';
+
+var myApp = angular.module('sampleApp', ['AngularFormsModule', 'SampleFormDefinition']);
+
+myApp.controller('myController', ['$scope', 'AngularForms', 'SampleForm',
+    function($scope, AngularForms, SampleForm) {
+
+    var form = AngularForms({ scope: $scope, targetId: 'basicForm', form: SampleForm });
+    form.inject();
+
+    $scope.sources = [
+            { id: 'google', label: 'Google' },
+            { id: 'yahoo', label: 'Yahoo!' },
+            { id: 'bing', label: 'Bing' },
+            { id: 'facebook', label: 'Facebook' },
+            { id: 'word', label: 'A friend told me' },
+            { id: 'other', label: 'Other' }
+            ];
+
+    }]);
