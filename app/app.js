@@ -17,7 +17,11 @@ angular.module('myApp', [
     .config(['$routeProvider', "RestangularProvider", function ($routeProvider, RestangularProvider) {
         $routeProvider.otherwise({redirectTo: '/swap-gallery'});
 
+<<<<<<< HEAD
         RestangularProvider.setBaseUrl('/api');
+=======
+        RestangularProvider.setBaseUrl(BASE_URL);
+>>>>>>> 90a7a14b205a0937f6816ff81ac2b1a48ede9c1e
         //RestangularProvider.setDefaultHeaders({'Content-Type': undefined});
     }])
 

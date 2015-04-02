@@ -33,11 +33,11 @@ angular.module('myApp.register', ['ngRoute', 'ngCookies'])
                 .then(function(response) {
                     $window.location = '#/swap-gallery';
                     console.log('Register Success: ' + response);
-                }), function(response) {
+                }, function(response) {
                     console.log('Register error: ' + response);
                     $scope.errorMessage = response;
-                };
-        }
+                });
+        };
 
         $scope.hasError = function (field, validation) {
             if (validation) {
