@@ -18,7 +18,7 @@
 11 error You can get their info via:
 11 error     npm owner ls angular-seed
 11 error There is likely additional logging output above.
-12 error System Darwin 14.0.0
+12 error System Darwin 14.1.0
 13 error command "node" "/usr/local/bin/npm" "start"
 14 error cwd /Users/davidjohnson/dev/swapup/frontend
 15 error node -v v0.10.33
